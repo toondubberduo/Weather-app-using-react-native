@@ -28,7 +28,7 @@ const WeatherApp = () => {
   const [city, setcity] = useState<string>('');
   const [loading, setloading] = useState<boolean>(false);
 
-  // 🔁 This function fetches weather for either GPS or City
+ 
   const fetchweather = async () => {
     setloading(true);
     try {
