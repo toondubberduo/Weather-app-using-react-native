@@ -63,7 +63,7 @@ const WeatherApp = () => {
     setloading(false);
   };
 
-  // 🔁 Only runs on first load: gets current GPS location
+
   useEffect(() => {
     async function getCurrentLocation() {
       let { status } = await Location.requestForegroundPermissionsAsync();
@@ -79,7 +79,7 @@ const WeatherApp = () => {
     getCurrentLocation();
   }, []);
 
-  // 🔁 When GPS is available and no city entered, fetch weather
+ 
   useEffect(() => {
     if (location && city === '') {
       fetchweather();
